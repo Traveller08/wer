@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .rect{
+            background-color:red;
+            margin-top: 300px;
+            height: 100px;
+            width: 200px;         
+            border-radius: 10px;
+            display: flex;
+            text-align: center;
+           
+        }
+       
+        
+        @keyframes rot {
+            from{}
+            to{ transform: rotate(360deg);}
+        }
+       
+        .wheel1,.wheel2{
+            animation-direction: normal;
+            animation-name: rot;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+         
+        }
+        @keyframes mov{
+            from{}
+            to{transform: translate(1500px);}
+        }
+        .car
+        {
+            animation-name: mov;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+       
+        .wheel{
+            display: flex;
+            
+        }
+        .wheel1{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(1, 1, 7);
+            border-radius: 50%;
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            transition: transform 1s;
+            
+        }
+        .wheel2{
+            width: 50px;
+            height: 50px;
+            background-color:black;
+            border-radius: 50%;
+            margin-left: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            transition: transform 1s;
+        }
+       
+        .road
+        {
+            width: 100%;
+            height: 20px;
+            background-color: black;
+            margin-top: 0px;
+        }
+        .ground
+        {
+            width: 100%;
+            height: 800px;
+            background-color: chartreuse;
+            margin-top: 0px;
+        }
+        
+        .wind1,.wind2
+        {
+           background-color: rgb(175, 211, 207);
+            width: 40px;
+            height: 20px;
+            margin-top: 30px;
+            margin: 20px;
+            
+        }
+        .wind1
+        {
+            margin-left: 30px;
+        }
+        @keyframes colchange
+        {
+            from{background-color: yellow;}
+            to{background-color: gray;
+                transform: translate(1200px);}
+        }
+       .sun
+       {
+           width: 50px;
+           height: 50px;
+           background-color: yellow;
+           border-radius: 50%;
+           
+          margin-top: 50px;
+          margin-left: 100px;
+           animation-name: colchange;
+           animation-duration: 12s;
+           animation-direction: normal;
+           animation-iteration-count: infinite;
+           
+       }
+       .sun
+       {
+        
+         transform: scale(2);
+       }
+       @keyframes back-ch
+       {
+           from{background-color: rgb(172, 241, 235);
+           }
+           to{background-color: rgb(34, 33, 33);
+         }
+       }
+       body
+       {   background-image: url(background1.jpg);
+           background-repeat: no-repeat;
+           background-size: contain;
+           animation-name: back-ch;
+           animation-duration: 15s;
+           animation-direction: alternate;
+            animation-iteration-count: infinite;
+            background-color: gray;
+       }
+        
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="car">
+        <div class="rect">
+            <div class="wind1"></div>
+            <div class="wind2"></div>
+        </div>
+        <div class="wheel">
+            <div class="wheel1">I</div>
+            <div class="wheel2">I</div>
+        </div>
+       
+    </div>
+    <div class="road">
+
+    </div>
+    <div class="ground">
+
+    </div>
+
+</body>
+</html>
